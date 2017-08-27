@@ -20,3 +20,6 @@ summarised_records.csv	This data file contains a summarised version of the combi
 The following code book is included:
 
 CodeBook.md				This code book describes the two above data sets and outlines the transformations applied in the above script.
+
+To run the script, download and unzip the source data files (in their original file structure) into the local repo folder, the run the script step by step.
+The script requires the dplyr library.

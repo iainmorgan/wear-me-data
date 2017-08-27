@@ -61,5 +61,13 @@ whole_data$subject <- whole_subjects$V1
 
 # Convert to a dplyr-compatible data table
 df <- tbl_df(whole_data)
+
+# Summarise data using dyplr to group and summarise
 new_data <- df %>% group_by(.dots=c("activityName","subject")) %>% summarise_all(funs(mean))
+
+# Convert back to a data frame
+new_data <- as.data.frame(new_data)
+
+# Write output to file
+write.table(new_data, "Summarised_records.txt", row.names = FALSE)
 
